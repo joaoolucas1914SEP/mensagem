@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para o Meu Amor ❤️</title>
+
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    font-family:Arial, sans-serif;
+    overflow:hidden;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    max-width:500px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    z-index:1;
+}
+
+h1{
+    color:#e91e63;
+}
+
+p{
+    color:#555;
+    font-size:18px;
+    line-height:1.6;
+}
+
+.coracao{
+    position:absolute;
+    font-size:24px;
+    animation:subir 6s linear infinite;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>❤️ Oi, meu amor ❤️</h1>
+
+    <p>
+        "O amor é paciente, o amor é bondoso."
+        <br>
+        <strong>1 Coríntios 13:4</strong>
+    </p>
+
+    <p>
+        Sou grato a Deus por ter você na minha vida.
+        <br><br>
+        Que o nosso amor continue crescendo a cada dia. ✨❤️
+    </p>
+</div>
+
+<script>
+function criarCoracao(){
+    const coracao = document.createElement("div");
+    coracao.innerHTML = "❤️";
+    coracao.classList.add("coracao");
+    coracao.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(coracao);
+
+    setTimeout(() => {
+        coracao.remove();
+    }, 6000);
+}
+
+setInterval(criarCoracao, 500);
+</script>
+
+</body>
+</html>
